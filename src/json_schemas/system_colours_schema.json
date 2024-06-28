@@ -1,0 +1,25 @@
+R"(
+{
+  "$id": "melbinst_system colours_schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "System Colours",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the system colour"
+      },
+      "colour": {
+        "type": "string",
+        "description": "The colour in RGB format"
+      }      
+    },
+    "required": [
+        "name",
+        "colour"
+    ]
+  }
+}
+)"

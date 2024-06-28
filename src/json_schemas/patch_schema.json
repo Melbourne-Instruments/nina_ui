@@ -1,0 +1,115 @@
+R"(
+{
+  "$id": "melbinst_patch_schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Patch",
+  "type": "object",
+  "properties": {
+    "revision": {
+      "type": "number",
+      "description": "The save revision"
+    },    
+    "common": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path string identifies the parameter"
+          },
+          "value": {
+            "type": "number",
+            "description": "Parameter value"
+          },
+          "str_value": {
+            "type": "string",
+            "description": "Parameter string value"
+          }
+        },
+        "oneOf": [
+          { "required": [
+              "path",
+              "value"
+            ]
+          },
+          { "required": [
+              "path",
+              "str_value"
+            ]
+          }     
+        ]        
+      }
+    },
+    "state_a": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path string identifies the parameter"
+          },
+          "value": {
+            "type": "number",
+            "description": "Parameter value"
+          },
+          "str_value": {
+            "type": "string",
+            "description": "Parameter string value"
+          }
+        },
+        "oneOf": [
+          { "required": [
+              "path",
+              "value"
+            ]
+          },
+          { "required": [
+              "path",
+              "str_value"
+            ]
+          }     
+        ]        
+      }
+    },
+    "state_b": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path string identifies the parameter"
+          },
+          "value": {
+            "type": "number",
+            "description": "Parameter value"
+          },
+          "str_value": {
+            "type": "string",
+            "description": "Parameter string value"
+          }
+        },
+        "oneOf": [
+          { "required": [
+              "path",
+              "value"
+            ]
+          },
+          { "required": [
+              "path",
+              "str_value"
+            ]
+          }     
+        ]         
+      }
+    }    
+  },
+  "required": [
+    "common",
+    "state_a",
+    "state_b"
+  ]   
+}
+)"

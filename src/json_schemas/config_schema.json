@@ -1,0 +1,57 @@
+R"(
+{
+  "$id": "melbinst_config_schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Config",
+  "type": "object",
+  "properties": {
+    "layers_num": {
+      "type": "number",
+      "description": "Current layers number"
+    },
+    "first_multifn_switch_num": {
+      "type": "number",
+      "description": "The first multi-function switch number, zero based"
+    },
+    "mod_src_num": {
+      "type": "number",
+      "description": "Currently selected modulation source"
+    },
+    "patch_modified_threshold": {
+      "type": "number",
+      "description": "Time (in seconds) after the first change is made to a patch to indicate it is in a modified state"
+    },
+    "demo_mode": {
+      "type": "boolean",
+      "description": "Enable/disable demo mode"
+    },
+    "demo_mode_timeout": {
+      "type": "number",
+      "description": "Time (in seconds) the unit will enter demo mode after being idle - if demo mode enabled"
+    },
+    "system_colour": {
+      "type": "string",
+      "description": "System colour represented as RGB"
+    },    
+    "osc_host_ip": {
+      "type": "string",
+      "description": "OSC Host IP address"
+    },
+    "osc_incoming_port": {
+      "type": "string",
+      "description": "OSC incoming port number"
+    },
+    "osc_outgoing_port": {
+      "type": "string",
+      "description": "OSC outgoing port number"
+    },
+    "osc_send_count": {
+      "type": "number",
+      "description": "OSC send count, number of times a send will be repeated for dodgey networks/apps"
+    }
+  },
+  "required": [
+    "layers_num"
+  ]
+}
+)"

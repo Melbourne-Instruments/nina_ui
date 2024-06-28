@@ -1,0 +1,106 @@
+R"(
+{
+  "$id": "melbinst_param_attributes_schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Param Attributes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "param_path": {
+        "type": "string",
+        "description": "The param path"
+      },
+      "ref": {
+        "type": "string",
+        "description": "The short reference for this param, used directly in Synthia"       
+      },
+      "patch": {
+        "type": "boolean",
+        "description": "This is a param is saved as a patch"   
+      },
+      "patch_common_layer_param": {
+        "type": "boolean",
+        "description": "This is a param is a param common to all layers"   
+      },      
+      "patch_layer_param": {
+        "type": "boolean",
+        "description": "This is a param is a layer param"   
+      },      
+      "patch_state_param": {
+        "type": "boolean",
+        "description": "This is a param is a state param"   
+      },
+      "global_param": {
+        "type": "boolean",
+        "description": "This is a param is a global param"        
+      },
+      "layer_1_param": {
+        "type": "boolean",
+        "description": "This is a param only applies to Layer 1"        
+      },      
+      "display_name": {
+        "type": "string",
+        "description": "Override the plugin and show the specified name. If empty the param is never shown"        
+      },
+      "display_switch": {
+        "type": "boolean",
+        "description": "This is a switch param with two possible values"        
+      },      
+      "num_positions": {
+        "type": "number",
+        "description": "This is a position param with the specified number of positions"
+      },            
+      "display_range_min": {
+        "type": "number",
+        "description": "The min range value to display"
+      },
+      "display_range_max": {
+        "type": "number",
+        "description": "The max range value to display"
+      },
+      "haptic_mode": {
+        "type": "string",
+        "description": "The haptic mode for this param"
+      },      
+      "display_strings": {
+        "type": "array",
+        "items": {
+          "string": "string",
+          "description": "String value for the specified position"
+        }
+      },
+      "value_tag": {
+        "type": "string",
+        "description": "Tag string value for all values of this param"
+      },       
+      "value_tags": {
+        "type": "array",
+        "items": {
+          "string": "string",
+          "description": "Tag string value for the specified position, for enum params"
+        }
+      },      
+      "numeric_enum_param": {
+        "type": "boolean",
+        "description": "Indicates this param is a numeric enum param"        
+      },
+      "always_show": {
+        "type": "boolean",
+        "description": "Applies to Mod Matrix params only, always show the param, cannot be deleted"        
+      },
+      "set_ui_state": {
+        "type": "string",
+        "description": "The UI state to enter, processing specific"       
+      },
+      "param_list": {
+        "type": "string",
+        "description": "The param_list name for this param"
+      }     
+    },
+    "required": [
+        "param_path"
+    ]
+  }
+}
+)"

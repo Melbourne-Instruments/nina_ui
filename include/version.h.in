@@ -1,0 +1,23 @@
+/**
+ *-----------------------------------------------------------------------------
+ * Copyright (c) 2020-2023 Melbourne Instruments, Australia
+ *-----------------------------------------------------------------------------
+ * @file  version.h
+ * @brief Version information.
+ *-----------------------------------------------------------------------------
+ */
+#ifndef _VERSION_H
+#define _VERSION_H
+
+// Version
+#define NINA_UI_MAJOR_VERSION   1
+#define NINA_UI_MINOR_VERSION   5
+#define NINA_UI_PATCH_VERSION   0
+
+// If a BETA release define here
+//#define NINA_UI_BETA_RELEASE
+
+// GIT commit
+#define NINA_UI_GIT_COMMIT_HASH "@GIT_COMMIT_HASH@"
+
+#endif  // _VERSION_H

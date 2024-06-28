@@ -1,0 +1,90 @@
+R"(
+{
+  "$id": "melbinst_haptic_modes_schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Haptic modes",
+  "type": "object",
+  "properties": {
+    "default_knob_haptic_mode": {
+      "type": "string",
+      "description": "Default knob haptic mode"
+    },  
+    "default_switch_haptic_mode": {
+      "type": "string",
+      "description": "Default switch haptic mode"
+    }, 
+    "haptic_modes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "control_type": {
+            "type": "string",
+            "description": "Control string identifies the type of Surface control"
+          },
+          "name": {
+            "type": "string",
+            "description": "Haptic mode name"
+          },
+          "knob_start_pos": {
+            "type": "number",
+            "description": "Knob physical start pos, in degrees"
+          },
+          "knob_width": {
+            "type": "number",
+            "description": "Knob physical travel width, in degrees"
+          },
+          "knob_actual_start_pos": {
+            "type": "number",
+            "description": "Knob actual pos, in degrees"
+          },
+          "knob_actual_width": {
+            "type": "number",
+            "description": "Knob actual travel width, in degrees"
+          },
+          "knob_num_detents": {
+            "type": "number",
+            "description": "Number of indents, only applicable to a knob"
+          },
+          "knob_friction": {
+            "type": "number",
+            "description": "Knob friction, only applicable to a knob"
+          },
+          "knob_detent_strength": {
+            "type": "number",
+            "description": "Detent strength, only applicable to a knob"
+          },                    
+          "knob_indents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "angle": {
+                  "type": "number",
+                  "description": "Angle of the indent, in degrees"
+                },
+                "hw_active": {
+                  "type": "boolean",
+                  "description": "Whether this is indent is activated in hardware, or just software"
+                }
+              }             
+            }
+          },
+          "switch_mode": {
+            "type": "number",
+            "description": "The switch mode"
+          }    
+        },
+        "required": [
+          "control_type",
+          "name"
+        ]
+      }     
+    }
+  },
+  "required": [
+    "default_knob_haptic_mode",
+    "default_switch_haptic_mode"
+  ]
+}
+)"
