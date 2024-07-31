@@ -10,10 +10,7 @@ $ git clone --recurse-submodules https://github.com/Melbourne-Instruments/nina_u
 
 The Nina UI app uses CMake as its build system. A generate script is also provided for convenient setup. Simply running ./generate with no arguments in the root of Nina UI will setup a build folder containing a Release configuration and a Debug configuration. CMake arguments can be passed through the generate script using the --cmake-args flag. Those arguments will then be added to both configurations.
 
-To cross compile for the Raspberry Pi, the Melbourne Instruments SDK *must* be used. It can be downloaded from here:
-
-https://jmxaudio.sharepoint.com/:u:/s/Synthia/EW5yKNPFLIlKr-lEJOI4GjMBvqMia0uWeeDBqzW5vJLBXQ?e=oOFlBo
-
+To cross compile for the Raspberry Pi, the Melbourne Instruments SDK *must* be used
 It is recommended to install the SDK in the /opt folder on your Ubuntu PC.
 
 Once this has been done, source the environment script to set-up the build environment, for example:
